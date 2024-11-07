@@ -7,7 +7,8 @@ interface Props {
 const CategoryCard = ({thumb_src,title} : Props) => {
     return (
         // <div className="card-category-box" style={{backgroundImage : `url(${thumb_src})`}}>
-        <div className="card-category-box">
+        <div className="card-category-box" style={{backgroundImage: `url(${thumb_src})`,
+          }}>
             <div className="card-title-area">
                 <div className="card-title-text">
                     {title}
