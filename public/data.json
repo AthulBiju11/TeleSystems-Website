@@ -1,0 +1,19 @@
+{
+    "categories": [
+    {
+      "thumb_src": "/public/images/category1.png",
+      "title": "Cordless",
+      "collection": "Pre-fall"
+    },
+    {
+      "thumb_src": "/public/images/category2.png",
+      "title": "Wired Normal",
+      "collection": "Designers"
+    },
+    {
+      "thumb_src": "/public/images/category3.png",
+      "title": "Wired Caller ID",
+      "collection": "Summer"
+    }
+  ]
+}

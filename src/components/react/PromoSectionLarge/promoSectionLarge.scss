@@ -1,0 +1,141 @@
+
+.promo-container {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 7vh; /* Adds space equivalent to the navbar's height */
+      
+
+    .promo-image {
+        position: relative; /* Set position to relative for the pseudo-element */
+        background-image: url('/public/images/promoBackground.jpg');
+        background-size: 120%;
+        background-position: left center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        
+                
+        
+       
+    
+
+        /* Pseudo-element for dimming effect */
+        &:before {
+            content: '';
+            position: absolute; /* Position it absolutely */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+            z-index: 1; /* Place it below the text */
+        }
+
+        .promo-text {
+            width: 100%;
+            position: relative; /* Keep the text on top of the dimming layer */
+            z-index: 2;
+            max-width: 800px;
+            padding: 1rem;
+            height: 100%;
+            width: 35%; /* Width of text container */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .welcome {
+                font-size: 50px;
+            }
+
+            .description{
+                
+                margin-bottom: 1rem;
+            }
+            
+        }
+
+        .products-button{
+            button{
+                padding: 0.75rem 1.5rem;
+                width: 250px;
+                font-size: 1rem;
+                font-weight: bold;
+                color: #545f6f;
+                background-color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover{
+                    background-color: #dbdbdb;
+                }
+            }
+        }
+
+        @media (max-width: 1024px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover; // This might look better on mobile
+            background-position: center;
+
+            .promo-text {
+                width: 100%; // Adjust width for better mobile display
+                margin: 0 auto;
+
+                .welcome {
+                    font-size: 30px; // Slightly smaller font for mobile
+                }
+
+                .description{
+                    font-size: 18px;
+                }
+
+                button{
+                    width: 200px;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover; // This might look better on mobile
+            background-position: center;
+
+            .promo-text {
+                width: 100%; // Adjust width for better mobile display
+                margin: 0 auto;
+
+                .welcome {
+                    font-size: 20px; // Slightly smaller font for mobile
+                }
+
+                .description{
+                    font-size: 14px;
+                }
+
+                button{
+                    width: 180px;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        
+    }
+
+    @media (max-width : 768px){
+        height: 60vh;
+    }
+}
+

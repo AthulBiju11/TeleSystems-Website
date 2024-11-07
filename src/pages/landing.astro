@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Navbar from "../components/react/Navbar/navbar"
+import PromoSectionLarge from "../components/react/PromoSectionLarge/promoSectionLarge"
+import "../../assets/scss/landing.scss"
+import CategoryCard from "../components/react/sub-components/CategoryCard/categoryCard"
+import data from "../../public/data.json"
+--- 
+
+<Layout title="Landing Page">
+    <main>
+        <Navbar client:load/>
+        <PromoSectionLarge/>
+        <div class="category-card-container">
+            <div class="category-container">
+                <div class="title">
+                    Shop by category
+                </div>
+                <div class="short-description">
+                    Browse all categories {">"}
+                </div>
+                <div class="card-container">
+                    {
+                        data.categories.slice(0,4).map(category => <CategoryCard thumb_src={category.thumb_src} title={category.title}/>)
+                    }
+                </div>
+            </div>
+        </div>
+        <div style="height : 200px;">
+            Hi
+        </div>
+        <div style="height : 200px;">
+            Hi
+        </div>
+    </main>
+</Layout>
+
