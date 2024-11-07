@@ -3,8 +3,8 @@ import Layout from "../layouts/Layout.astro"
 import Navbar from "../components/react/Navbar/navbar"
 import PromoSectionLarge from "../components/react/PromoSectionLarge/promoSectionLarge"
 import "../../assets/scss/landing.scss"
-// import CategoryCard from "../components/react/sub-components/CategoryCard/categoryCard"
-import CategoryCard from "../components/astro/CategoryCard/CategoryCard.astro"
+import CategoryCard from "../components/react/sub-components/CategoryCard/categoryCard"
+// import CategoryCard from "../components/astro/CategoryCard/CategoryCard.astro"
 import data from "../../public/data.json"
 --- 
 
@@ -21,13 +21,13 @@ import data from "../../public/data.json"
                     Browse all categories {">"}
                 </div>
                 <div class="card-container">
-                    <!-- {
-                        data.categories.slice(0,4).map(category => <CategoryCard thumb_src={category.thumb_src} title={category.title} client:load/>)
-                    } -->
-
                     {
-                        data.categories.slice(0,4).map(category => <CategoryCard thumbSrc={category.thumb_src} title={category.title}/>)
+                        data.categories.slice(0,4).map(category => <CategoryCard thumb_src={category.thumb_src} title={category.title} client:load/>)
                     }
+
+                    <!-- {
+                        data.categories.slice(0,4).map(category => <CategoryCard thumbSrc={category.thumb_src} title={category.title}/>)
+                    } -->
                 </div>
             </div>
         </div>
