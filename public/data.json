@@ -1,17 +1,17 @@
 {
     "categories": [
     {
-      "thumb_src": "/public/images/category1.jpg",
+      "thumb_src": "/images/category1.jpg",
       "title": "Cordless",
       "collection": "Pre-fall"
     },
     {
-      "thumb_src": "/public/images/category2.jpg",
+      "thumb_src": "/images/category2.jpg",
       "title": "Wired Normal",
       "collection": "Designers"
     },
     {
-      "thumb_src": "/public/images/category3.jpg",
+      "thumb_src": "/images/category3.jpg",
       "title": "Wired Caller ID",
       "collection": "Summer"
     }

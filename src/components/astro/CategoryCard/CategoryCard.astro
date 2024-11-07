@@ -1,15 +1,13 @@
 ---
-interface Props {
-  thumbSrc: string;
-  title: string;
-}
 
 const { thumbSrc, title } = Astro.props;
+const backgroundColor = "green";
+ 
 ---
 
-<style lang="scss">
+<style lang="scss" >
   .card-category-box {
-    background-color: blue;
+    background-color: red;
     width: 300px;
     height: 400px;
     border-radius: 10px;
@@ -77,7 +75,7 @@ const { thumbSrc, title } = Astro.props;
   }
 </style>
 
-<div class="card-category-box" style=`background-image: url(${thumbSrc});`>
+<div class="card-category-box" style=`background-image: url(${thumbSrc});` >
   <div class="card-title-area">
     <div class="card-title-text">{title}</div>
   </div>
