@@ -11,11 +11,11 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <nav>
       <div className={`navbar-wrapper ${isMenuOpen ? 'expanded' : ''}`}>
         <div className="navbar-container">
           <div className="logo-container">
-            <div className="logo">Tele Systems</div>
+            <div className="logo"><a href="/">Tele Systems</a></div>
           </div>
           <div className="navbar-options">
             <button className="menu-button" onClick={toggleMenu}>
@@ -24,7 +24,7 @@ const Navbar = () => {
             
             <div className="menu">
               <ul>
-                <li>All Products</li>
+                <li><a href="/products/">All Products</a></li>
                 <li>Contact Us</li>
               </ul>
             </div>
@@ -32,12 +32,12 @@ const Navbar = () => {
         </div>
         <div className="mobile-menu">
           <ul>
-            <li>All Products</li>
+            <li><a href="/products/">All Products</a></li>
             <li>Contact Us</li>
           </ul>
         </div>
       </div>
-    </>
+    </nav>
   );
 };
 

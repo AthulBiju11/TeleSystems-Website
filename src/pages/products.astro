@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Navbar from "../components/react/Navbar/navbar"
+import ProductsComponent from "../components/react/Products/productsComponent"
+import Footer from "../components/react/Footer/footer"
+import "../../assets/scss/products.scss"
+---
+
+<Layout title="Products">
+    <main>
+        <Navbar client:load/>
+        <div class="products-container">
+            <div class="products-title">
+                <h1>Products List</h1>
+            </div>
+            <ProductsComponent client:load/>
+        </div>
+        
+    </main>
+</Layout>

@@ -1,0 +1,194 @@
+
+
+
+// .main-container {
+    
+//     display: flex;
+//     margin-top: 50px;
+//     flex-direction: column;
+
+//     .title-div {
+//         font-size: 25px;
+//         font-weight: 500;
+//         display: flex;
+//         padding: 10px;
+//         justify-content: center;
+//     }
+
+//     .filter-products-container {
+//         display: flex;
+//         margin-top: 20px;
+//         padding: 10px;
+//     }
+
+//     .filter-container {
+        
+//         color: white;
+//         background-color: #2f2c29;
+//         padding: 20px;
+//         border-radius: 8px;
+//         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+//         width: 30%;
+//         max-width: 250px;
+//         max-height: 450px;
+
+//         h3 {
+//             font-size: 1.5em;
+//             margin-bottom: 10px;
+//         }
+
+//         .filter-section {
+//             margin-bottom: 20px;
+
+//             h4 {
+//                 font-size: 1.2em;
+//                 color: white;
+//                 margin-bottom: 10px;
+//                 font-weight: bold;
+//             }
+
+//             .filter-option {
+//                 display: flex;
+//                 align-items: center;
+//                 margin-bottom: 8px;
+
+//                 input {
+//                     margin-right: 8px;
+//                 }
+
+//                 label {
+//                     font-size: 1em;
+//                     color: white;
+//                 }
+//             }
+
+//             select {
+//                 width: 100%;
+//                 padding: 8px;
+//                 border-radius: 4px;
+//                 border: 1px solid #ccc;
+//             }
+//         }
+//     }
+
+//     .product-cards-container {
+//         display: grid;
+//         grid-template-columns: repeat(3, 1fr); // Three columns layout
+//         gap: 20px; // Space between cards
+//         width: 100%;
+//         margin-left: 50px;
+//     }
+// }
+
+
+
+
+
+.main-container {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+
+    .title-div {
+        font-size: 25px;
+        font-weight: 500;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .filter-products-container {
+        display: flex;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .filter-container {
+        color: white;
+        background-color: #2f2c29;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+        width: 30%;
+        max-width: 250px;
+        max-height: 450px;
+
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .filter-section {
+            margin-bottom: 20px;
+
+            h4 {
+                font-size: 1.2em;
+                color: white;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            .filter-option {
+                display: flex;
+                align-items: center;
+                margin-bottom: 8px;
+
+                input {
+                    margin-right: 8px;
+                }
+
+                label {
+                    font-size: 1em;
+                    color: white;
+                }
+            }
+
+            select {
+                width: 100%;
+                padding: 8px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+            }
+        }
+    }
+
+    .product-cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        width: 100%;
+        margin-left: 50px;
+
+        .no-products-found {
+            grid-column: 1 / -1; // Span all columns
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .no-products-icon {
+                font-size: 48px;
+                margin-bottom: 16px;
+            }
+
+            h3 {
+                color: #2f2c29;
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+
+            p {
+                color: #6c757d;
+                font-size: 16px;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
