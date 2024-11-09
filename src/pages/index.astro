@@ -23,7 +23,7 @@ import data from "../../public/data.json"
                 </div>
                 <div class="card-container">
                     {
-                        data.categories.slice(0,4).map(category => <CategoryCard thumb_src={category.thumb_src} title={category.title}/>)
+                        data.categories.slice(0,4).map(category => <CategoryCard thumb_src={category.thumb_src} title={category.title} client:load/>)
                     }
 
                 </div>

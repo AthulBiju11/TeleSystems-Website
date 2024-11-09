@@ -3,15 +3,21 @@ import "./productCard.scss";
 
 interface ProductCardProps {
     imageUrl: string;
+    id : string,
     modelName: string;
     description: string;
     originalPrice: number;
     discountedPrice: number;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ imageUrl, modelName, description, originalPrice, discountedPrice }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ id, imageUrl, modelName, description, originalPrice, discountedPrice }) => {
+
+    const handleClick = () => {
+        window.location.href = `/products/${id}`;
+    }
+
     return (
-        <div className="product-card">
+        <div className="product-card" onClick={handleClick}>
             <div className="image-container" style={{backgroundImage : `url(${imageUrl})`}}>
                 {/* <img src={imageUrl} alt={modelName} /> */}
             </div>

@@ -1,42 +1,64 @@
 
 
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import ProductCard from "../sub-components/ProductCard/productCard";
-import "./product-component.scss";
+import "./productComponent.scss"
 import data from "../../../../public/data.json";
 
+
 const ProductsComponent = () => {
-  const [selectedType, setSelectedType] = useState("All");
-  const [selectedBrand, setSelectedBrand] = useState("All");
-  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
-
-  const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>) => {
-    setSelectedType(event.target.value);
-  };
-
-  const handleBrandChange = (event: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>) => {
-    setSelectedBrand(event.target.value);
-  };
-
-  const filteredProducts = data.products.filter((product) => {
-    const typeMatch = selectedType === "All" || product.type === selectedType;
-    const brandMatch = selectedBrand === "All" || product.brand === selectedBrand;
-    return typeMatch && brandMatch;
-  });
-
-  const types = [
-    "All",
-    "Basic Telephones",
-    "Caller ID Telephones",
-    "Speaker Phones",
-    "Cordless Telephones",
-  ];
-  const brands = [
-    "All",
-    "Panasonic Telephones",
-    "Lextel Telephones",
-    "Beetel Telephones",
-  ];
+    const [selectedType, setSelectedType] = useState("All");
+    const [selectedBrand, setSelectedBrand] = useState("All");
+    const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  
+    useEffect(() => {
+      // Get the type parameter from URL when component mounts
+      const urlParams = new URLSearchParams(window.location.search);
+      const typeFromUrl = urlParams.get('type');
+      
+      if (typeFromUrl) {
+        // Set the selected type if it exists in our types array
+        const validType = types.find(
+          type => type.toLowerCase() === typeFromUrl.toLowerCase()
+        );
+        if (validType) {
+          setSelectedType(validType);
+        }
+      }
+    }, []);
+  
+    const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>) => {
+      setSelectedType(event.target.value);
+      // Update URL when type changes
+      const newUrl = new URL(window.location.href);
+      newUrl.searchParams.set('type', event.target.value);
+      window.history.pushState({}, '', newUrl);
+    };
+  
+    const handleBrandChange = (event: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>) => {
+      setSelectedBrand(event.target.value);
+    };
+  
+    const filteredProducts = data.products.filter((product) => {
+      const typeMatch = selectedType === "All" || product.type === selectedType;
+      const brandMatch = selectedBrand === "All" || product.brand === selectedBrand;
+      return typeMatch && brandMatch;
+    });
+  
+    const types = [
+      "All",
+      "Basic Telephones",
+      "Caller ID Telephones",
+      "Speaker Phones",
+      "Cordless Telephones",
+    ];
+    
+    const brands = [
+      "All",
+      "Panasonic Telephones",
+      "Lextel Telephones",
+      "Beetel Telephones",
+    ];
 
   return (
     <div className="main-container">
@@ -131,6 +153,7 @@ const ProductsComponent = () => {
             filteredProducts.map((product, index) => (
               <ProductCard
                 key={index}
+                id={product.id}
                 imageUrl={product.imageUrl}
                 modelName={product.modelName}
                 description={product.description}

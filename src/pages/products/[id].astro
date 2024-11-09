@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import data from '../../../public/data.json';
+import "../../../assets/scss/product-page.scss"
+import ProductPage from "../../components/react/ProductPage/productPage"
+
+
+export function getStaticPaths() {
+    return data.products.map(product => ({
+        params: { id: product.id },
+        props: { product }
+    }));
+}
+
+const { product } = Astro.props;
+---
+
+<Layout title={`${product.modelName} | Tele Systems`}>
+    <main>
+        <div class="product-main-container">
+            <ProductPage id={product.id} imageUrl={product.imageUrl} modelName={product.modelName} description={product.description}  
+            originalPrice={product.originalPrice} discountedPrice={product.discountedPrice} type={product.type} brand={product.brand} 
+            images={product.images} colours={product.colours} client:load/>
+        </div>
+    </main>
+</Layout>
