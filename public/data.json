@@ -53,6 +53,42 @@
         "discountedPrice": 100,
         "type": "Speaker Phones",
         "brand": "Lextel Telephones"
-    }
+    },
+    {
+      "imageUrl": "/images/category1.jpg",
+      "modelName": "LX-912",
+      "description": "Lextel Model with Caller ID, Speaker Phone and Contact Memory",
+      "originalPrice": 200,
+      "discountedPrice": 100,
+      "type": "Caller ID Telephones",
+      "brand": "Lextel Telephones"
+  },
+  {
+      "imageUrl": "/images/category1.jpg",
+      "modelName": "BT-100",
+      "description": "Basic Beetel telephone with crystal clear audio",
+      "originalPrice": 200,
+      "discountedPrice": 100,
+      "type": "Basic Telephones",
+      "brand": "Beetel Telephones"
+  },
+  {
+      "imageUrl": "/images/category1.jpg",
+      "modelName": "PAN-X20",
+      "description": "Panasonic cordless telephone with extended range",
+      "originalPrice": 200,
+      "discountedPrice": 100,
+      "type": "Cordless Telephones",
+      "brand": "Panasonic Telephones"
+  },
+  {
+      "imageUrl": "/images/category1.jpg",
+      "modelName": "LX-SP100",
+      "description": "Lextel speaker phone for conference calls",
+      "originalPrice": 200,
+      "discountedPrice": 100,
+      "type": "Speaker Phones",
+      "brand": "Lextel Telephones"
+  }
 ]
 }

@@ -10,6 +10,11 @@
     text-align: center;
     padding: 15px;
 
+    @media (max-width : 768px){
+        width: 250px;
+        max-height: 400px;
+    }
+
     &:hover{
         .image-container{
             scale: 1.05;

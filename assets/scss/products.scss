@@ -1,11 +1,19 @@
 main {
-    margin-top: 7vh;
+    
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.95); // Changed from solid red to transparent
+    width: 100%;
+    position: relative;
+    z-index: 2;
+
     .products-container{
-        margin-top: 80px;
         text-align: center;
-        width: 75%;
+        margin-top: 7vh;
+        .products-title{
+            color: white;
+            background-color: #2f2c29;
+        }
         
     }
 
