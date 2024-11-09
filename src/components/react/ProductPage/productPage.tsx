@@ -69,9 +69,6 @@ const ProductPage: React.FC<Product> = ({
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-3xl font-bold">&#8377;399</span>
-              {/* <div className="flex items-center space-x-2">
-                <span className="text-gray-600">117 reviews</span>
-              </div> */}
             </div>
           </div>
 
@@ -103,9 +100,24 @@ const ProductPage: React.FC<Product> = ({
             </div>
           </div>
 
-          <button className="w-full bg-navy-700 text-white py-3 px-4 rounded-md font-medium hover:bg-navy-800 transition-colors">
-            Add to cart
-          </button>
+          <div className="flex flex-col bg-red-500 rounded p-5 text-black h-auto">
+            <div className="text-base md:text-lg">
+              Hi, Currently we don't support online order placements.
+            </div>
+            <div className="text-lg md:text-xl font-bold py-2">
+              Please Call / Whatsapp{" "}
+              <span className="text-white">[91 9020562422]</span> to place your
+              order.
+            </div>
+            <div className="text-base md:text-lg">
+              Better yet, see us in person!
+              <br />
+              <span className="text-sm md:text-base">
+                We love our customers, so feel free to visit during normal
+                business hours.
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

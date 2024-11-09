@@ -113,6 +113,18 @@
       "brand": "Lextel Telephones",
       "images" : ["/images/category1.jpg","/images/category2.jpg","/images/category3.jpg","/images/category4.jpg"],
       "colours" : ["Black","White"]
-  }
+  },
+  {
+    "id": "9", 
+      "imageUrl": "/images/category1.jpg",
+      "modelName": "KX-TS400SX",
+      "description": "Lextel speaker phone for conference calls",
+      "originalPrice": 200,
+      "discountedPrice": 100,
+      "type": "Speaker Phones",
+      "brand": "Lextel Telephones",
+      "images" : ["/images/category1.jpg","/images/category2.jpg","/images/category3.jpg","/images/category4.jpg"],
+      "colours" : ["Black"]
+  } 
 ]
 }

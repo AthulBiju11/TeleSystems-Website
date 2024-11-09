@@ -25,7 +25,7 @@ const Navbar = () => {
             <div className="menu">
               <ul>
                 <li><a href="/products/">All Products</a></li>
-                <li>Contact Us</li>
+                <li><a href="/contact-us/">Contact Us</a></li>
               </ul>
             </div>
           </div>
@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="mobile-menu">
           <ul>
             <li><a href="/products/">All Products</a></li>
-            <li>Contact Us</li>
+            <li><a href="/contact-us/">Contact Us</a></li>
           </ul>
         </div>
       </div>

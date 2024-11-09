@@ -1,6 +1,7 @@
 import "./promoSectionLarge.scss";
 
 const promoSectionLarge = () => {
+
   return (
     <div className="promo-container">
       <div className="promo-image">
@@ -10,7 +11,9 @@ const promoSectionLarge = () => {
             Your trusted source for all telecom needs!
           </div>
           <div className="products-button">
-            <button>View All Products</button>
+            <nav>
+              <a href="/products/"><button>View All Products</button></a>
+            </nav> 
           </div>
         </div>
       </div>
