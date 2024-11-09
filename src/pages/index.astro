@@ -1,12 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import Navbar from "../components/react/Navbar/navbar"
 import PromoSectionLarge from "../components/react/PromoSectionLarge/promoSectionLarge"
 import "../../assets/scss/landing.scss"
 import CategoryCard from "../components/react/sub-components/CategoryCard/categoryCard"
 import AboutComponent from "../components/react/AboutComponent/aboutComponent"
-import Footer from "../components/react/Footer/footer"
 import data from "../../public/data.json"
+import CustomerOpinion from "../components/react/CustomerOpinion/customerOpinion"
 --- 
 
 <Layout title="Tele Systems">
@@ -36,7 +35,9 @@ import data from "../../public/data.json"
             
             <AboutComponent/>
         </div>
-
+        <div>
+            <CustomerOpinion/>
+        </div>
     </main>
 </Layout>
 

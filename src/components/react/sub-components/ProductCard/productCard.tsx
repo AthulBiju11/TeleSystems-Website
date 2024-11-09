@@ -25,8 +25,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ id, imageUrl, modelName, desc
                 <h2 className="model-name">{modelName}</h2>
                 <p className="description">{description}</p>
                 <div className="price-container">
-                    <span className="original-price">${originalPrice.toFixed(2)}</span>
-                    <span className="discounted-price">${discountedPrice.toFixed(2)}</span>
+                    <span className="original-price">&#8377;{originalPrice.toFixed(2)}</span>
+                    <span className="discounted-price">&#8377;{discountedPrice.toFixed(2)}</span>
                 </div>
             </div>
         </div>

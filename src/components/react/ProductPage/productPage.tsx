@@ -67,8 +67,13 @@ const ProductPage: React.FC<Product> = ({
           </div>
 
           <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <span className="text-3xl font-bold">&#8377;399</span>
+            <div className="flex items-center gap-2">
+              <span className="text-lg text-gray-500 line-through">
+                &#8377;{originalPrice.toFixed(2)}
+              </span>
+              <span className="text-3xl font-bold text-red-600">
+                &#8377;{discountedPrice.toFixed(2)}
+              </span>
             </div>
           </div>
 
