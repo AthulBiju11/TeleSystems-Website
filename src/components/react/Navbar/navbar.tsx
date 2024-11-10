@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import "./navbar.scss";
-
+import ViewTransitions from "astro/components/ViewTransitions.astro";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
@@ -37,7 +37,9 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+      
     </nav>
+    
   );
 };
 
