@@ -2,7 +2,7 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const ContactComponent = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-slate-900 pb-7">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-slate-900 pb-7 pt-10">
       <main className="px-4 sm:px-6 lg:px-8">
         <div className="mt-[7vh] max-w-4xl mx-auto">
           {/* Header Section */}
