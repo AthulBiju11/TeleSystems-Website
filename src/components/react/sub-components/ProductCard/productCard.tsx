@@ -8,9 +8,10 @@ interface ProductCardProps {
     description: string;
     originalPrice: number;
     discountedPrice: number;
+    brand : string;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ id, imageUrl, modelName, description, originalPrice, discountedPrice }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ id, imageUrl, modelName, description, originalPrice, discountedPrice, brand }) => {
 
     const handleClick = () => {
         window.location.href = `/products/${id}`;
@@ -23,6 +24,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ id, imageUrl, modelName, desc
             </div>
             <div className="product-info">
                 <h2 className="model-name">{modelName}</h2>
+                <p className="brand">{brand.split(" ")[0]}</p>
                 <p className="description">{description}</p>
                 <div className="price-container">
                     <span className="original-price">&#8377;{originalPrice.toFixed(2)}</span>

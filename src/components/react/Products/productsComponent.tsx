@@ -1,5 +1,3 @@
-
-
 import React, { useState , useEffect} from "react";
 import ProductCard from "../sub-components/ProductCard/productCard";
 import "./productComponent.scss"
@@ -12,12 +10,10 @@ const ProductsComponent = () => {
     const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   
     useEffect(() => {
-      // Get the type parameter from URL when component mounts
       const urlParams = new URLSearchParams(window.location.search);
       const typeFromUrl = urlParams.get('type');
       
       if (typeFromUrl) {
-        // Set the selected type if it exists in our types array
         const validType = types.find(
           type => type.toLowerCase() === typeFromUrl.toLowerCase()
         );
@@ -29,7 +25,6 @@ const ProductsComponent = () => {
   
     const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>) => {
       setSelectedType(event.target.value);
-      // Update URL when type changes
       const newUrl = new URL(window.location.href);
       newUrl.searchParams.set('type', event.target.value);
       window.history.pushState({}, '', newUrl);
@@ -40,7 +35,13 @@ const ProductsComponent = () => {
     };
   
     const filteredProducts = data.products.filter((product) => {
-      const typeMatch = selectedType === "All" || product.type === selectedType;
+      if (selectedType === "All") return true;
+
+
+      const productTypes = product.type.split(',').map(type => type.trim());
+      
+      const typeMatch = productTypes.includes(selectedType);
+      
       const brandMatch = selectedBrand === "All" || product.brand === selectedBrand;
       return typeMatch && brandMatch;
     });
@@ -48,7 +49,7 @@ const ProductsComponent = () => {
     const types = [
       "All",
       "Basic Telephones",
-      "Caller ID Telephones",
+      "Caller ID Telephones", 
       "Speaker Phones",
       "Cordless Telephones",
     ];
@@ -56,8 +57,7 @@ const ProductsComponent = () => {
     const brands = [
       "All",
       "Panasonic Telephones",
-      "Lextel Telephones",
-      "Beetel Telephones",
+      "Lextel Telephones"
     ];
 
   return (
@@ -159,6 +159,7 @@ const ProductsComponent = () => {
                 description={product.description}
                 originalPrice={product.originalPrice}
                 discountedPrice={product.discountedPrice}
+                brand={product.brand}
               />
             ))
           ) : (
