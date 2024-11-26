@@ -1,4 +1,4 @@
-nav{
+nav {
   a {
     text-decoration: none;
     color: black;
@@ -24,7 +24,9 @@ nav{
 
   &.expanded {
     @media (max-width: 1000px) {
-      height: calc(7vh + 120px); // Adjust this value based on your mobile menu content
+      height: calc(
+        7vh + 120px
+      ); // Adjust this value based on your mobile menu content
     }
   }
 }
@@ -40,13 +42,42 @@ nav{
     align-items: center;
     width: 22%;
     justify-content: end;
-
+  
     .logo {
       margin-right: 20px;
       font-weight: 550;
       cursor: pointer;
+      text-align: center;
+      padding-left: 25px;
+  
+      .small-screen-logo {
+        display: none; // Default: hidden on larger screens
+      }
+  
+      .main-logo-title {
+        display: block; // Default: visible on larger screens
+        font-size: 18px;
+      }
+  
+      .logo-sub-title {
+        color: red;
+        font-size: 13px;
+      }
     }
   }
+  
+  @media (max-width: 1268px) {
+    .small-screen-logo {
+      display: block !important; // Ensure it's visible
+      color: black;
+    }
+  
+    .main-logo-title,
+    .logo-sub-title {
+      display: none !important; // Ensure they're hidden
+    }
+  }
+  
 
   @media (max-width: 650px) {
     .logo-container {
@@ -118,7 +149,7 @@ nav{
 
 .mobile-menu {
   display: none;
-  
+
   @media (max-width: 1000px) {
     display: block;
     height: 0;
@@ -126,7 +157,7 @@ nav{
     transition: height 0.3s ease-out;
 
     .expanded & {
-      height: 120px; 
+      height: 120px;
     }
 
     ul {
@@ -147,4 +178,3 @@ nav{
     }
   }
 }
-
