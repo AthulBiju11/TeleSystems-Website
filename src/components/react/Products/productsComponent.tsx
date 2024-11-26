@@ -33,18 +33,17 @@ const ProductsComponent = () => {
     const handleBrandChange = (event: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>) => {
       setSelectedBrand(event.target.value);
     };
-  
+
     const filteredProducts = data.products.filter((product) => {
-      if (selectedType === "All") return true;
-
-
+      
       const productTypes = product.type.split(',').map(type => type.trim());
-      
-      const typeMatch = productTypes.includes(selectedType);
-      
+      const typeMatch = selectedType === "All" || productTypes.includes(selectedType);
       const brandMatch = selectedBrand === "All" || product.brand === selectedBrand;
+
       return typeMatch && brandMatch;
     });
+    
+    
   
     const types = [
       "All",

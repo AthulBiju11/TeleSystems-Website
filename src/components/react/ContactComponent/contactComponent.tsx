@@ -11,7 +11,7 @@ const ContactComponent = () => {
               Get in Touch
             </h1>
             <p className="text-gray-300 text-lg">
-              We'd love to hear from you
+              We'd love to hear from you.
             </p>
           </div>
 
@@ -51,9 +51,9 @@ const ContactComponent = () => {
                 <h2 className="text-2xl font-semibold text-white ml-4">Call Us</h2>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                Main: (+91) 9847469484<br />
-                Support: (+91) 9020562422 <br/>
-                Land Line : 0481-2424622,2425136
+                Main : (+91) 9020562422<br />
+                WhatsApp : (+91) 9020562422<br />
+                Land Line : 0481-2424622
               </p>
             </div>
 

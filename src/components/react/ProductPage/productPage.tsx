@@ -109,15 +109,19 @@ const ProductPage: React.FC<Product> = ({
             <div className="text-base md:text-lg">
               Hi, Currently we don't support online order placements.
             </div>
-            <div className="text-lg md:text-xl font-bold py-2">
+            <div className="text-lg md:text-xl font-bold">
               Please Call / Whatsapp{" "}
               <span className="text-white">[91 9020562422]</span> to place your
               order.
             </div>
+
+            <div className="text-lg md:text-xl font-bold mb-2">
+              <span className="text-white">Next day delivery</span> at most places inside <span className="text-white">Kerala</span>
+            </div>
             <div className="text-base md:text-lg">
               Better yet, see us in person!
               <br />
-              <span className="text-sm md:text-base">
+              <span className="text-base md:text-lg">
                 We love our customers, so feel free to visit during normal
                 business hours.
               </span>
